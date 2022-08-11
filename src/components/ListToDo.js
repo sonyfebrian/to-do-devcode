@@ -50,14 +50,17 @@ const TutorialsList = () => {
 
   return (
     <>
-      <div class="flex flex-wrap justify-center align-center">
+      <div
+        class="flex flex-wrap justify-center align-center"
+        data-cy="activity-item"
+      >
         {tutorials &&
           tutorials.map((tutorial, index) => (
             <div className="p-4 md:w-1/4" key={index}>
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                 <div className="w-full">
                   <div className="w-full flex p-2 mb-10">
-                    <div className="pl-2 pt-2 ">
+                    <div className="pl-2 pt-2 " data-cy="header-title">
                       <p className="font-bold">{tutorial.title}</p>
                     </div>
                   </div>
@@ -71,7 +74,10 @@ const TutorialsList = () => {
                       </p>
                     </a>
                     <span className="text-gray-400 mr-3  items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 "></span>
-                    <span className="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <span
+                      className="text-gray-400 inline-flex items-center leading-none text-sm"
+                      data-cy="activity-item-delete-button"
+                    >
                       <button onClick={() => deleteTutorial(tutorial.id)}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
