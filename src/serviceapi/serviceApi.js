@@ -1,27 +1,27 @@
 import http from "../api";
 
-const getAll = () => {
-  return http.get("/todo-items");
+const getActivityGroup = () => {
+  return http.get("/activity-groups");
 };
 
 const get = (id) => {
   return http.get(`/todo-items/${id}`);
 };
 
-const create = (data) => {
-  return http.post("/todo-items", data);
+const createActivityGroup = (data) => {
+  return http.post("/activity-groups", data);
 };
 
 const update = (id, data) => {
   return http.put(`/todo-items/${id}`, data);
 };
 
-const remove = (id) => {
-  return http.delete(`/todo-items/${id}`);
+const deleteActivitygroup = (id) => {
+  return http.delete(`/activity-groups/${id}`);
 };
 
 const removeAll = () => {
-  return http.delete(`/todo-items`);
+  return http.delete(`/activity-groups`);
 };
 
 const findByTitle = (title) => {
@@ -29,11 +29,11 @@ const findByTitle = (title) => {
 };
 
 const Service = {
-  getAll,
+  getActivityGroup,
   get,
-  create,
+  createActivityGroup,
   update,
-  remove,
+  deleteActivitygroup,
   removeAll,
   findByTitle,
 };
