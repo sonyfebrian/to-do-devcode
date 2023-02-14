@@ -8,6 +8,10 @@ const getDetailActivityGroup = (id) => {
   return http.get(`/activity-groups/${id}`);
 };
 
+const getAllTodo = () => {
+  return http.get("/todo-items");
+};
+
 const getdetail = (id) => {
   return http.get(`/todo-items/${id}`);
 };
@@ -16,12 +20,19 @@ const createActivityGroup = (data) => {
   return http.post("/activity-groups", data);
 };
 
+const createToDo = (data) => {
+  return http.post("/todo-items", data);
+};
+
 const update = (id, data) => {
   return http.put(`/todo-items/${id}`, data);
 };
 
 const deleteActivitygroup = (id) => {
   return http.delete(`/activity-groups/${id}`);
+};
+const deleteActivity = (id) => {
+  return http.delete(`/todo-items/${id}`);
 };
 
 const removeAll = () => {
@@ -38,8 +49,11 @@ const Service = {
   getdetail,
   createActivityGroup,
   update,
+  getAllTodo,
+  createToDo,
   deleteActivitygroup,
   removeAll,
+  deleteActivity,
   findByTitle,
 };
 

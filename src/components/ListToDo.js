@@ -6,6 +6,30 @@ import Swal from "sweetalert2";
 
 const TutorialsList = () => {
   const [tutorials, setTutorials] = useState([]);
+  const initialActivityState = {
+    title: "worht",
+    email: "as@io.com",
+  };
+  const [todo, setTodo] = useState(initialActivityState);
+
+  const saveActivity = () => {
+    var data = {
+      title: todo.title,
+      email: todo.email,
+    };
+    TutorialDataService.createActivityGroup(data)
+      .then((response) => {
+        setTodo({
+          title: response.data.title,
+          email: response.data.email,
+        });
+
+        console.log(response.data);
+      })
+      .catch((e) => {
+        console.log(e, "error");
+      });
+  };
   const date = new Date();
 
   let navigate = useNavigate();
@@ -50,6 +74,26 @@ const TutorialsList = () => {
 
   return (
     <>
+      <div
+        className="grid grid-cols-6 gap-4 mt-20"
+        data-cy="activity-add-button"
+      >
+        <div className="col-start-2 col-end-3 text-3xl font-bold">
+          <h1 data-cy="activity-title" className="">
+            Activity
+          </h1>
+        </div>
+        <div className="col-end-7 col-span-2">
+          <button
+            data-cy="activity-add-button"
+            type="button"
+            className="flex items-center rounded-lg bg-indigo-500 px-4 py-2 text-white bg-[#16ABF8] "
+            onClick={saveActivity}
+          >
+            + Tambah
+          </button>
+        </div>
+      </div>
       <div class="flex flex-wrap justify-center align-center">
         {tutorials &&
           tutorials.map((tutorial, index) => (
