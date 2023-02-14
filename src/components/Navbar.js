@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <nav
+    <div
       data-cy="header-background"
       className="flex items-center justify-between flex-wrap bg-[#16ABF8] p-6"
     >
@@ -12,6 +12,6 @@ export default function Navbar() {
       >
         TO DO LIST APP
       </h2>
-    </nav>
+    </div>
   );
 }
