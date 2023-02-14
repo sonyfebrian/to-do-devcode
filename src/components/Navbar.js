@@ -10,7 +10,7 @@ export default function Navbar() {
         data-cy="header-title"
         className="font-bold text-2xl text-white tracking-tight font-poppins m-4"
       >
-        To Do List App
+        TO DO LIST APP
       </h2>
     </nav>
   );
