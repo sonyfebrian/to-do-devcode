@@ -1,10 +1,14 @@
 import http from "../api";
 
 const getActivityGroup = () => {
-  return http.get("/activity-groups");
+  return http.get("/activity-groups?email=as@io.com");
 };
 
-const get = (id) => {
+const getDetailActivityGroup = (id) => {
+  return http.get(`/activity-groups/${id}`);
+};
+
+const getdetail = (id) => {
   return http.get(`/todo-items/${id}`);
 };
 
@@ -30,7 +34,8 @@ const findByTitle = (title) => {
 
 const Service = {
   getActivityGroup,
-  get,
+  getDetailActivityGroup,
+  getdetail,
   createActivityGroup,
   update,
   deleteActivitygroup,

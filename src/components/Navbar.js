@@ -9,12 +9,12 @@ export default function Navbar() {
       >
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
-            <span
+            <h2
               data-cy="header-title"
-              className="font-bold text-2xl text-white tracking-tight font-poppins m-48 pl-2 pt-2"
+              className="font-bold text-2xl text-white tracking-tight font-poppins m-4"
             >
               To Do List App
-            </span>
+            </h2>
           </div>
           <div></div>
         </div>

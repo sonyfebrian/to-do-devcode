@@ -4,24 +4,26 @@ import Navbar from "./components/Navbar";
 import List from "./components/ListToDo";
 import { Routes, Route } from "react-router-dom";
 import Modal from "./components/Modal";
+import DetailPage from "./components/DetailPage";
 import TutorialDataService from "./serviceapi/serviceApi";
 
 function App() {
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
   const initialActivityState = {
-    title: "coba 2",
-    email: "tes@io.com",
+    title: "worht",
+    email: "as@io.com",
   };
+  const [todo, setTodo] = useState(initialActivityState);
 
   const saveActivity = () => {
     var data = {
-      title: "coba2",
-      email: "tes@io.com",
+      title: todo.title,
+      email: todo.email,
     };
     TutorialDataService.createActivityGroup(data)
       .then((response) => {
-        initialActivityState({
+        setTodo({
           title: response.data.title,
           email: response.data.email,
         });
@@ -56,9 +58,9 @@ function App() {
       <div className="container mt-3">
         <Routes>
           <Route path="/" element={<List />} />
-          {/* <Route path="/tutorials" element={<TutorialsList />} />
-          <Route path="/add" element={<AddTutorial />} />
-          <Route path="/tutorials/:id" element={<Tutorial />} /> */}
+          {/* <Route path="/detail" element={<DetailPage/>} />
+          <Route path="/add" element={<AddTutorial />} /> */}
+          <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
       </div>
     </>

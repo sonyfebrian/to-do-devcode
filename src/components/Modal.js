@@ -116,7 +116,11 @@ const Modal = ({ show, close }) => {
       {submitted ? (
         <div>
           <h4>You submitted successfully!</h4>
-          <button className="btn btn-success" onClick={newTutorial}>
+          <button
+            className="btn btn-success"
+            onClick={newTutorial}
+            data-cy="todo-add-button"
+          >
             Add
           </button>
         </div>
