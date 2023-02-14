@@ -1,7 +1,7 @@
 // import './App.css';
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import List from "./components/ListToDo";
+import List from "./components/ListActivity";
 import { Routes, Route } from "react-router-dom";
 import Modal from "./components/Modal";
 import DetailPage from "./components/DetailPage";
