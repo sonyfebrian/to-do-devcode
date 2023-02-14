@@ -60,7 +60,7 @@ const TutorialsList = () => {
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                 <div className="w-full">
                   <div className="w-full flex p-2 mb-10">
-                    <div className="pl-2 pt-2 " data-cy="header-title">
+                    <div className="pl-2 pt-2 " data-cy="activity-title">
                       <p className="font-bold">{tutorial.title}</p>
                     </div>
                   </div>
