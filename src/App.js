@@ -42,7 +42,7 @@ function App() {
         data-cy="activity-add-button"
       >
         <div className="col-start-2 col-end-3 text-3xl font-bold">Activity</div>
-        <div className="col-end-7 col-span-2 ...">
+        <div className="col-end-7 col-span-2">
           <button
             type="button"
             className="flex items-center rounded-lg bg-indigo-500 px-4 py-2 text-white bg-[#16ABF8] "
