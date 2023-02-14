@@ -11,7 +11,7 @@ export default function Navbar() {
           <div className="text-sm lg:flex-grow">
             <span
               data-cy="header-title"
-              className="font-semibold text-base text-white tracking-tight font-poppins m-48 pl-2 pt-2"
+              className="font-bold text-2xl text-white tracking-tight font-poppins m-48 pl-2 pt-2"
             >
               To Do List App
             </span>
